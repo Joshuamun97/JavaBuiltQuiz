@@ -1,0 +1,75 @@
+*, *::before, ::after{
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+}
+
+
+#Quiz {
+    width: 100%;
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: center;
+    font-size: 300%;
+    
+}
+#TimerJS {
+    margin-top: 1%;
+    display: flex;
+    justify-content:center
+}
+
+.quizContainer{
+    width: 85%;
+    margin: 2.5%;
+    background-color: rgba(247, 196, 68, 0.476);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px;
+}
+.btnGrid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+h2 {
+    margin-top: 2.5%;
+    background-color: transparent;
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+
+
+.Button {
+    background-color: white;
+    color: rgba(247, 196, 68, 0.672);
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 5%;
+    border: none;
+}
+
+button {
+    border: none;
+}
+/*Need to figure out why hover isnt filling entire button*/
+.Button :hover {
+    background-color: gray;
+    color: gray;
+}
+
+button :hover {
+    background-color: gray;
+    color: gray;
+}
+.hide {
+    display: none;
+}
+
+/*.Button :after {
+    background-color: white;
+} */
