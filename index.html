@@ -14,19 +14,19 @@
         <section class="quizContainer">
             <h2></h2>
         <div id="questionContainer" class="hide">
-            <div id="question">Question</div>
+            <div id="question"></div>
             <section id="Answers" class="btnGrid">
                 <div>
-                    <button class="btn">Answer A</button>
+                    <button class="btn" id="btn1">Answer A</button>
                 </div>
                 <div>
-                    <button class="btn">Answer B</button>
+                    <button class="btn" id="btn2">Answer B</button>
                 </div>
                 <div>
-                    <button class="btn">Answer C</button>
+                    <button class="btn" id="btn3">Answer C</button>
                 </div>
                 <div>
-                    <button class="btn">Answer D</button>
+                    <button class="btn" id="btn4">Answer D</button>
                 </div>
             </section>
         </div>
@@ -40,6 +40,12 @@
             <div id = "beginQuiz" class="Button">
                 <button class="quizBtn">Begin Quiz</button>
            </div>
+           <form class="hidden" action="/my-handling-form-page" method="post">
+            <ul>
+              <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" />
+              </li>
 
         </section>
         <script src="assets/js/quiz.js"></script>

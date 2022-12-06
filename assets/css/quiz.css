@@ -75,6 +75,10 @@ h2 {
 .hide {
     display: none;
 }
+.hidden{
+    display: none;
+
+}
 
 .show {
     display: flex;
@@ -83,6 +87,15 @@ h2 {
     flex-direction: column;
     background-color: rgba(247, 196, 68, 0.476);
    
+}
+.form{
+    background-color: white;
+    color: rgba(247, 196, 68, 0.672);
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 5%;
+
 }
 
 #question{
