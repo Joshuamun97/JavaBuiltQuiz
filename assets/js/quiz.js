@@ -4,12 +4,12 @@ var showQuestions = document.querySelector('.hide');
 var ShowForm = document.querySelector('.hidden')
 var question = [
     {
-        title: 'what City in Arizona has the largest population?',
+        title: 'What City in Arizona has the largest population?',
         answers: ['Flagstaff', 'Cottonwood', 'Phoenix', 'Sedona'],
         correctAnswer: 2
     },
     {
-        title: 'what Town in Arizona is home to the famous haunted hotel, The Grand Hotel?',
+        title: 'What Town in Arizona is home to the famous haunted hotel, The Grand Hotel?',
         answers: ['Cottonwood', 'Payson', 'Phoenix', 'Jerome'],
         correctAnswer: 3
     },
@@ -31,17 +31,25 @@ titleDiv.textContent = question.title;
 
 
 function timerMain() {
-    var seconds = 5;
+    var seconds = 40;
     var timer = setInterval(function () {
         document.getElementById('TimerJS').innerHTML = +seconds;
+        console.log (seconds)
         if (seconds === 0) {
-            document.getElementById('TimerJS').innerHTML = 'Sorry, Time is Up!'
+            document.getElementById('TimerJS').innerHTML = 'Times up! Enter your name to see how you did compared to other players!';
             clearInterval(timer);
-        }
+            showQuestions.classList.remove('show');
+            showQuestions.classList.add('hide');
+            ShowForm.classList.remove('hidden');
+            ShowForm.classList.add('form');
+             }
         if (question[arrindex] === undefined) {
-            document.getElementById('TimerJS').innerHTML = 'Submit your score to see how you did compared to other players!'
+            document.getElementById('TimerJS').innerHTML = 'Enter your name to see how you did compared to other players!'
+            clearInterval(timer);
+        
         }
         seconds--;
+        
 
     }, 1000);
 }
@@ -89,13 +97,13 @@ function setNextQuestion() {
 function scoreKeeper() {
     var checkAnswer=0;
     var answer1=document.querySelector('#btn3').addEventListener('click', setNextQuestion);
-    if (question[0].correctAnswer===){
-        console.log('Correct!')
-    }
-
-    
+ //   if (question[0].correctAnswer===){
+  //      console.log('Correct!')
+ //   }
 
 }
+
+//document.getElementById("MyForm").submit('click');
 
 document.querySelector('#btn1').addEventListener('click', setNextQuestion);
 document.querySelector('#btn2').addEventListener('click', setNextQuestion);
